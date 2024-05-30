@@ -30,4 +30,4 @@ Denna applikation erbjuder grundläggande aritmetiska operationer: addition, sub
 2. Välj alternativ 5 för att visa tidigare beräkningar.
 3. Tryck Enter.
 
-**Förväntat resultat:** Applikationen visar en lista över alla tidigare beräkningar, t.ex. "5 + 3 = 8" och "10 - 4 = 6".
+**Förväntat resultat:** Applikationen visar en lista över alla tidigare beräkningar, om det finns några, t.ex. "5 + 3 = 8" och "10 - 4 = 6".
