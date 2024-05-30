@@ -9,44 +9,42 @@ namespace ClassModels
     public class Calculator
     {
 
-        private static List<string> calculationHistory = new List<string>();
+        private List<string> calculationHistory = new List<string>();
         
-        public static int Divide(int x, int y)
+        public int Divide(int x, int y)
         {
-            int result = x / y;
-            return result;
+            return x / y;
+           
         }
-        public static int Add(int x, int y)
+        public int Add(int x, int y)
         {
-            int result = x + y;
-            return result;
+            return x + y;
         }
-        public static int Multiply(int x, int y)
+        public int Multiply(int x, int y)
         {
-            int result = x * y;
-            return result;
+            return  x * y;
+
         }
-        public static int Subtract(int x, int y)
+        public int Subtract(int x, int y)
         {
-            int result = x - y;
-            return result;
+            return  x - y;
         }
 
-        public static void DivideOutput()
+        public void DivideOutput()
         {
             UserManager.ReadNumbers(out int x, out int y);
             int result = Divide(x, y);
-            PrintResult("*", x, y, result);
+            PrintResult("/", x, y, result);
         }
 
-        public static void AddOutput()
+        public void AddOutput()
         {
             UserManager.ReadNumbers(out int x, out int y);
             var result = Add(x, y);
             PrintResult("+", x, y, result);
         }
 
-        public static void MultiplyOutput() 
+        public void MultiplyOutput() 
         {
             UserManager.ReadNumbers(out int x, out int y);
             int result = Multiply(x,y);
@@ -54,25 +52,21 @@ namespace ClassModels
         }
 
        
-        public static void SubtractOutput()
+        public void SubtractOutput()
         {
             UserManager.ReadNumbers(out int x, out int y);
             int result = Subtract(x,y);
             PrintResult("-", x, y, result);
         }
 
-        public static void PrintResult(string operation, int x, int y, int result)
+        public void PrintResult(string operation, int x, int y, int result)
         {
             string calculation = $"{x} {operation} {y} = {result}";
-            SaveCalculation(calculation);
-        }
-
-        private static void SaveCalculation(string calculation)
-        {
             Console.WriteLine(calculation);
-            calculationHistory.Add(calculation);
-        }
-        public static void ShowOldCalculations()
+            calculationHistory.Add(calculation);//Lägger till en uträkning i listan för gjorda uträkningar
+        }    
+        
+        public void ShowOldCalculations()
         {
             if(calculationHistory.Count == 0)
             {

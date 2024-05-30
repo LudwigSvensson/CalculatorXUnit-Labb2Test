@@ -2,6 +2,11 @@
 {
     public class Menu
     {
+        private readonly Calculator _calculator;
+        public Menu()
+        {
+            _calculator = new Calculator();
+        }
         public void TheMenu()
         {           
             while (true)
@@ -35,52 +40,52 @@
             }
         }
 
-        public static void MenuChoice1()
+        public void MenuChoice1()
         {
             Console.Clear();
-            Calculator.AddOutput();
+            _calculator.AddOutput();
             Console.WriteLine("Tryck enter för att återgå till meny");
             Console.ReadKey();
             Console.Clear();
         }
 
-        private static void MenuChoice2()
+        public void MenuChoice2()
         {
             Console.Clear();
-            Calculator.SubtractOutput();
+            _calculator.SubtractOutput();
             Console.WriteLine("Tryck enter för att återgå till meny");
             Console.ReadKey();
             Console.Clear();
         }
 
-        private static void MenuChoice3()
+        public void MenuChoice3()
         {
             Console.Clear();
-            Calculator.DivideOutput();
+            _calculator.DivideOutput();
             Console.WriteLine("Tryck enter för att återgå till meny");
             Console.ReadKey();
             Console.Clear();
         }
 
-        private static void MenuChoice4()
+        public void MenuChoice4()
         {
             Console.Clear();
-            Calculator.MultiplyOutput();
+            _calculator.MultiplyOutput();
             Console.WriteLine("Tryck enter för att återgå till meny");
             Console.ReadKey();
             Console.Clear();
         }
 
-        private static void MenuChoice5()
+        public void MenuChoice5()
         {
             Console.Clear();
-            Calculator.ShowOldCalculations();
+            _calculator.ShowOldCalculations();
             Console.WriteLine("Tryck enter för att återgå till meny");
             Console.ReadKey();
             Console.Clear();
         }
 
-        private static void PrintMenuChoices()
+        public static void PrintMenuChoices()
         {
             Console.WriteLine("1. Addition");
             Console.WriteLine("2. Subtraktion");
